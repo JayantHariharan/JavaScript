@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="eb.css" text="text/css">
+    <title>EB Bill Calculator</title>
+</head>
+<body>
+    <div id="content">
+        <h2>EB Bill Calculator Domestic Usage</h2>
+        <input type="number" id="unit" name="unit" placeholder="Enter the Consumed Units">
+        <br>
+        <button type="submit" onclick="amount()">Amount</button>
+        <button type="submit" onclick="location.href='eb_table.html'">EB Table</button>
+        <div id="result">
+            <div id="unitPrice"></div>
+            <div id="fixedPrice"></div>
+            <br>
+            <div id="totalAmount"></div>
+        </div>
+    </div>
+    <script src="eb_script.js"></script>
+</body>
+</html>
