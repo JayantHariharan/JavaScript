@@ -1,0 +1,56 @@
+body,.content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+body{
+    min-height: 100vh;
+    background-color: aqua;
+}
+.content{
+    width: 500px;
+    background-color:#FFFFFF;
+    border-radius: 10px;
+    flex-direction: column;
+    padding: 30px 30px 38px;
+    background-image: url(icons8-team-dhZtNlvNE8M-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.content h1{
+    font-size: 90px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.content .keys{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+button{
+    width: 30%;
+    padding: 20px;
+    border-radius: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 30px;
+    font-weight: bolder;
+    border:4px solid steelblue;
+}
+.keys #start:hover{
+    background-color: rgb(38, 190, 38);
+    color: #FFFFFF;
+}
+.keys #stop:hover{
+    background-color: rgb(194, 58, 58);
+    color:#FFFFFF
+}
+.keys #reset:hover{
+    background-color: rgb(219, 219, 60);
+    color: #FFFFFF;
+}
+.content h1{
+    width: 100%;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+    text-align: center;
+    opacity: 0.89;
+}
