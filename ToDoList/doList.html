@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="doList.css" type="text/css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="content">
+        <h1>REMINDERS</h1>
+        <div  id="addreminder">
+            <div class="head"><input type="text" id="title" placeholder="Enter the Task"></div>
+            <div class="reminderdate"><input type="date" id="date"></div>
+            <div class="remindertime"><input type="time" id="time"></div>
+            <div class="text"><textarea id="description" name="description" placeholder="Description"></textarea></div>
+            <div class="btncontainer">
+            <button class="btn" id="save">Save</button>
+            <button class="btn" id="delete">Delete</button>
+            </div>
+        </div>
+        <div class="container" id="container"></div>
+        <div class="btn">
+            <div class="circle" id="info">
+                <i class="fa-solid fa-info"></i>
+            </div>
+            <div class="circle" id="add">
+                <i class="fa-solid fa-plus"></i>
+            </div>
+            <div class="circle" id="list">
+                <i class="fa-solid fa-list"></i>
+            </div>  
+        </div>
+    </div>
+    <div class="notification" id="notification"></div>
+
+    <script src="doList.js"></script>
+</body>
+</html>
