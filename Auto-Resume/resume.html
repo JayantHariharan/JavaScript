@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="resume.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>Auto-Resume</title>
+</head>
+<body>
+    <div class="container">
+        <form id="form1">
+            <h2>PERSONAL DETAILS</h2>
+            <input type="text" id="first" placeholder="FIRST NAME" required>
+            <input type="text" id="last" placeholder="LAST NAME" required>
+            <input type="text" id="email" placeholder="EMAIL" required>
+            <input type="number" id="phone" placeholder="PHONE NO" required>
+            <input type="number" id="age" placeholder="AGE" required>
+            <br>
+            <select name="gender" class="gender" id="gender" required>
+                <option hidden>GENDER</option>
+                <option value="male">MALE</option>
+                <option value="female">FEMALE</option>
+                <option value="others">OTHERS</option>
+            </select>
+            <br>
+            <input type="text" id="nationality" placeholder="NATIONALITY" required>
+            <input type="text" id="state" placeholder="STATE" required>
+            <input type="text" id="country" placeholder="COUNTRY" required> 
+            <div class="btn-box">
+                <button type="button" id="next1">NEXT</button>
+                <br>
+                <p id="personal-error" class="error-msg"></p>
+            </div>
+        </form>
+       
+        <form id="form2">
+            <h2>EDUCATION DETAILS</h2>
+            <div class="education">
+           <div class="college edu">
+            <h3>COLLEGE DETAILS</h3>
+            <input type="text" id="collegename" placeholder="COLLEGE NAME" required>
+            <input type="text" id="collegelocation" placeholder="LOCATION" required>
+            <div class="year">
+                <input type="number" id="fromcollege" placeholder="START" required>
+                <input type="number" id="tocollege" placeholder="END" required>
+            </div>
+           </div>
+           <div class="school12 edu">
+            <h3>12TH DETAILS</h3>
+            <input type="text" id="highschoolname" placeholder="SCHOOL NAME" required>
+            <input type="text" id="highschoollocation" placeholder="LOCATION" required>
+            <div class="year">
+                <input type="number" id="from12school" placeholder="START" required>
+                <input type="number" id="to12school" placeholder="END" required>
+            </div>
+           </div>
+           <div class="school10 edu">
+            <h3>10TH DETAILS</h3>
+            <input type="text" id="schoolname" placeholder="SCHOOL NAME" required>
+            <input type="text" id="schoollocation" placeholder="LOCATION" required>
+            <div class="year">
+                <input type="number" id="from10school" placeholder="START" required>
+                <input type="number" id="to10school" placeholder="END" required>
+            </div>
+           </div>
+           </div>
+           <div class="btn-box">
+            <button type="button" id="back1">BACK</button>
+            <button type="button" id="next2">NEXT</button>
+            <p id="education-error" class="error-msg"></p>
+        </div>
+        
+        </form>
+        <form id="form3">
+            <h2>SKILLS & CERTIFICATES</h2>
+            <div class="skill">
+            <div class="row">
+            <h3>ABOUT YOURSELF</h3>
+            <div class="aboutme">
+                <textarea id="about" placeholder="     upto 200 characters     " rows="6" cols="49" required></textarea>
+                <p id="about-error" class="error-msg"></p>
+                <p id="char-count">0/500</p>
+            </div>
+            </div>
+            <div class="row">
+            <h3>SKILLS (CHOOSE UPTO 6 SKILLS)</h3>
+            <div class="skills" required>
+                <div id="java" class="skill-item">JAVA</div>
+                <div id="Python" class="skill-item">PYTHON</div>
+                <div id="c" class="skill-item">C</div>
+                <div id="c++" class="skill-item">C++</div>
+                <div id="sql" class="skill-item">SQL</div>
+                <div id="htmlcss" class="skill-item">HTML CSS</div>
+                <div id="htmlcssjs" class="skill-item">HTML CSS JS</div>
+                <div id="php" class="skill-item">PHP</div>
+                <div id="c#" class="skill-item">C#</div>
+            </div>
+            </div>
+            <div class="row">
+                <h3>CERTIFICATES & ACHIVEMENTS</h3>
+            <div class="certificate">
+                <input type="text" id="cert1" placeholder="Certificate 1" required>
+                <input type="text" id="cert2" placeholder="Certificate 2">
+                <input type="text" id="cert3" placeholder="Certificate 3">
+            </div>
+            </div>
+            </div>
+            <div class="btn-box">
+                <button type="button" id="back2">BACK</button>
+                <button type="button" id="next3">NEXT</button>
+                <p id="skill-error" class="error-msg"></p>
+            </div>
+        </form>
+        <form id="form4">
+            <h3>SOCIAL LINK</h3>
+            <input type="text" id="github" placeholder="GITHUB PROFILE NAME" required>
+            <input type="text" id="linkedin" placeholder="LINKEDIN PROFILE NAME" required>
+            <div class="btn-box">
+                <button type="button" id="back3">BACK</button>
+                <button type="button" id="next4">NEXT</button>
+                <p id="social-error" class="error-msg"></p>
+            </div>
+        </form>
+        <form id="form5">
+            <div class="image-container" required>
+                <h2>PROFILE PHOTO</h2>
+                <div class="wrapper">
+                    <div class="image">
+                        <img src=" " alt="">
+                      </div>
+                    <div class="image-content">
+                        <div class="icon"><i class="fas fa-cloud-upload-alt"></i></div>
+                        <div class="text">No file chosen,yet!</div>
+                    </div>
+                    <div id="cancel-btn"><i class="fa-solid fa-xmark fa-fade"></i></div>
+                    <div class="file-name">File Name Here</div>
+                </div>
+                <input id="default-btn" type="file" hidden>
+                <button id="custom-btn">Choose a file</button>
+            </div>
+            <div class="slideshow-container" id="slideshow-container">
+                <h2>RESUME LAYOUT</h2>
+                <div class="mySlides fade">
+                  <img src="Resume1.jpg" style="width:100%">
+                </div>
+                
+                <div class="mySlides fade">
+                  <img src="Resume2.jpg" style="width:100%">
+                </div>
+                
+                <div class="mySlides fade">
+                  <img src="Resume3.jpg" style="width:100%">
+                </div>
+                
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+                
+                </div>
+                <br>
+                
+                <div style="text-align:center">
+                  <span class="dot" onclick="currentSlide(1)"></span> 
+                  <span class="dot" onclick="currentSlide(2)"></span> 
+                  <span class="dot" onclick="currentSlide(3)"></span> 
+                </div>
+            <p id="photo-error" class="error-msg"></p>
+            <div class="btn-box">
+                <button id="downloadbtn"><i class="fa-solid fa-download"></i>DOWNLOAD
+                <div class="progress-wrapper">
+                    <div class="inr"></div>
+                    <div class="checkmark">
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="circle">
+                        <div class="bar left">
+                            <div class="progress-download"></div>
+                        </div>
+                        <div class="bar right">
+                            <div class="progress-download"></div>
+                        </div>
+                    </div>
+                </div>
+                </button>
+            </div>
+           
+        </form>
+        <div class="step-row">
+            <div id="progress"></div>
+            <div class="step-col"><small>PERSONAL</small></div>
+            <div class="step-col"><small>EDUCATION</small></div>
+            <div class="step-col"><small>SKILLS</small></div>
+            <div class="step-col"><small>SOCIAL</small></div>
+            <div class="step-col"><small>UPLOAD</small></div>
+        </div>
+    </div>
+    <script src="resume.js"></script>
+</body>
+</html>

@@ -1,0 +1,256 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.resume-container {
+   overflow: hidden;
+    width: 21cm;
+    height: 29.4cm;
+    margin-left: 20px;
+    padding: 5px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: grid;
+    grid-template-rows: 180px 250px 260px 300px; 
+    grid-gap: 10px;
+}
+.row1,.row2,.row3 {
+    width: auto;
+    padding: 10px;
+    position: relative;
+    text-align: center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 320px 400px;
+    column-gap: 10px;
+}
+.education,.skills{
+    width: 390px;
+}
+.row4{
+    width: auto;
+    padding: 10px;
+    position: relative;
+    text-align: center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 320px 400px;
+    height: 300px;
+    column-gap: 5px;
+}
+.contact div{
+    text-align: left;
+}
+.row1{
+    grid-template-columns: 220px 500px;
+}
+#name{
+    font-size: 80px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: italic;
+    text-transform: uppercase;
+}
+.row2-col2{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: auto;
+}
+.social div{
+    box-sizing:border-box;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+i{
+    font-size: 25px;
+    margin-right: 5px;
+}
+.social{
+    gap: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 230px 230px;
+}
+.row1-col1{
+    margin-left: auto;
+    margin-right: auto;
+}
+.photo{
+    width: 190px;
+    height: 180px;
+}
+img{
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+}
+.entry{
+    margin-top: 30px;
+}
+.entry{
+    text-align: end;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 20px;
+}
+.education{
+    display: grid;
+    grid-template-rows: auto;
+}
+.f1{
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: 270px 1fr;
+}
+.year{
+    display: grid;
+    grid-template-columns: 40px 10px 80px;
+}
+.row2 .objective,.row2 .education,.row3 .contact,.row3 .skills,.row4 .about,.row4 .certificates{ 
+    padding: 5px;
+    box-sizing:border-box;
+    border: 1px solid black;
+    height: 100%;
+    border-radius: 16px;
+}
+.row3 .contact div,.row2 .objective div{
+    font-size: 15px;
+    margin-left: 1px;
+    text-align: left;
+}
+.row2 .objective h2{
+    margin-bottom: 60px;
+}
+.row2 .objective div{
+    margin-left: 15px;
+}
+.objective-answer{
+    text-align: center;
+}
+.row2 h2,.row3 h2,.row4 h2{
+    text-decoration: underline;
+    letter-spacing: 2px;
+}
+.skills-container div{
+    box-sizing:border-box;
+    border: 1px solid black;
+    width: 98%;
+    min-height: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.about-container {
+    margin-top: 2px;
+    background: whitesmoke;
+    padding: 5px;
+    text-align: justify;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 5px;
+    border: 1px solid black;
+    word-wrap: break-word; /* Add this property */
+}
+
+.skills-container{
+    align-items: center;
+    gap: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 5px;
+    height: 60%;
+    border-radius: 16px;
+}
+.certificate-container{
+   
+    margin-top: 20px;
+    padding: 8px;
+    width: 97%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 11px;
+    text-align: justify;
+    display: grid;
+    gap: 30px;
+}
+.certificate-container div{
+    font-size: 20px;
+    padding: 6px;
+    border-radius: 5px;
+    background-color: aliceblue;
+    box-sizing:border-box;
+    border: 1px solid black;
+}
+.wordbreak{
+    word-break: break-all;
+}
+.about h2,.education h2{
+    margin-bottom: 10px;
+}
+
+/* Style elements by their IDs */
+#name,
+#github,
+#linkedin,
+#age,
+#gender,
+#nationality,
+#collegename,
+#collegelocation,
+#collegestart,
+#collegeend,
+#highname,
+#highschoollocation,
+#highstart,
+#highend,
+#schoolname,
+#schoollocation,
+#schoolstart,
+#schoolend,
+#location,
+#phone,
+#email {
+    font-weight: bold;
+    font-size: 16px;
+}
+#gender,#nationality{
+    text-transform: uppercase;
+}
+
+/* Style skills */
+.skill {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* Style the "ABOUT" container */
+.about-container {
+    margin-top: 2px;
+    background: whitesmoke;
+    padding: 5px;
+    text-align: justify;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 5px;
+    border: 1px solid black;
+    word-wrap: break-word;
+    font-weight: bold; /* Set text inside "ABOUT" container to bold */
+    font-size: 18px; /* Set text size inside "ABOUT" container to 20px */
+}
+#certificate-container{
+    background:inherit;
+}
+/* Style certificates */
+.certificate-container div {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Style other elements as needed */
+#name{
+    font-size: 60px;
+}
+

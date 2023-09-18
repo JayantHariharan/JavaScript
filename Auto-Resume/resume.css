@@ -1,0 +1,472 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+  
+body{
+    background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.3)),url(4884841.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.container{
+    overflow: hidden;
+    width: 480px;
+    height: 720px;
+    margin-top: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    letter-spacing: 2px;
+    background: #fff;
+    border-radius: 9px;
+    border: 8px double black;
+    position:relative;
+}
+h2,h3{
+    text-align: center;
+    text-decoration: underline;
+    margin-bottom: 40px; 
+}
+.container form{
+    transition: 0.8s;
+    width: 380px;
+    position: absolute;
+    top: 60px;
+    left: 60px;
+}
+form input,form select{
+    letter-spacing: 2px;
+    width: 100%;
+    padding: 11px 5px;
+    margin: 6px 0;
+    font-size: 18px;
+    border: 0;
+    border-bottom: 2px solid #999;
+    outline: none;
+    background: transparent;
+}
+::placeholder{
+    color: black;
+}
+.btn-box{
+    width: 100%;
+    margin: 30px auto;
+    text-align: center;
+}
+form button{
+    cursor: pointer;
+    width: 110px;
+    height: 35px;
+    margin: 0 10px;
+    background:linear-gradient(to right,#ff105f,#ffad06);
+    border: 0;
+    border-radius: 30px;
+    outline: none;
+    color: #fff;
+}
+#form2,#form3,#form4,#form5{
+    left: 510px;
+}
+
+.step-row{
+    width: 480px;
+    height: 30px;
+    margin: 2px auto;
+    border-radius: 31110px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 -1px 5px -1px #000;
+    position: relative;
+}
+.step-col{
+    width: 220px;
+    text-align: center;
+    color: #333;
+    position: relative;
+}
+#progress{
+    position: absolute;
+    height: 100%;
+    width: 96px;
+    border-radius: 20px;
+    background: linear-gradient(to right,#ff105f,#ffad06);
+}
+#progress::after{
+    content: '';
+    height: 0;
+    width: 0;
+    position: absolute;
+    right: -20px;
+    top: 0;
+    border-left: 20px solid #ffad06;
+}
+.year{
+    display: flex;
+    column-gap: 10px;
+}
+.education,.skill{
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.education .edu,.skill .row,.image-container,.slideshow-container{
+    padding: 10px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+#form2,#form3,#form5{
+    padding: 5px;
+    height: 600px;
+    overflow-y: auto;
+   
+}
+
+#form2 input,#form3 input{
+    width: 90%;
+}
+#form2 .year input{
+    width: 35%;
+}
+#form2::-webkit-scrollbar,#form3::-webkit-scrollbar,#form5::-webkit-scrollbar{
+    display: none;
+}
+
+.skills{
+    padding: 5px;
+    display: grid;
+    gap: 10px 10px;
+    grid-template-columns: auto auto auto;
+}
+.skills .skill-item{
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 3px double black;
+    border-radius: 32px;
+    padding: 5px;
+    font-size: 20px;
+    text-align: center;
+}
+textarea{
+    border: 3px double black;
+    border-radius: 6px;
+}
+#form4{
+    margin-top: 100px;
+}
+#form4 .btn-box{
+    margin-top: 60px;
+}
+body .image-container{
+    display: grid;
+    height: 100%;
+    place-items: center;
+    text-align: center;
+}
+.image-container{
+    margin-top: 20px;
+    position: relative;
+}
+.image-container .wrapper{
+    position: relative;
+    height: 300px;
+    width: 100%;
+    border-radius: 10px;
+    background: #fff;
+    border: 2px dashed #c2cdda;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.wrapper .image{
+    position:absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wrapper img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.wrapper .icon{
+    font-size: 100px;
+    color: #f54519;
+}
+.wrapper #cancel-btn i{
+    position:absolute;
+    font-size:20px;
+    right: 15px;
+    top: 15px;
+    color: #f54519;
+    cursor: pointer;
+    display: none;
+}
+.wrapper .text{
+    font-size: 20px;
+    font-weight: 500;
+    color: #dd6f43;
+}
+.wrapper.active:hover #cancel-btn i{
+    display: block;
+}
+.wrapper #cancel-btn i:hover{
+    color: #9658fe;
+}
+.wrapper .file-name{
+    position:absolute;
+    bottom: 0px;
+    width: 100%;
+    padding: 8px 0;
+    font-size: 18px;
+    color: #fff;
+    display: none;
+    background: linear-gradient(to right,#ff105f,#ffad06);
+}
+.wrapper.active:hover .file-name{
+    display: block;
+}
+.image-container #custom-btn{
+    margin-top: 30px;
+    display: block;
+    width: 100%;
+    height: 50px;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    background: linear-gradient(to right,#ff105f,#ffad06);
+}
+.wrapper.active{
+    border: none;
+}
+#downloadbtn{
+    width: 100%;
+    margin: 30px auto;
+    text-align: center;
+    cursor: pointer;
+    width: 110px;
+    height: 35px;
+    margin: 0 10px;
+    background:linear-gradient(to right,#ff105f,#ffad06);
+    border: 0;
+    border-radius: 30px;
+    outline: none;
+    color: #fff;
+}
+#downloadbtn{
+    font-size:20px;
+    width: 300px;
+    height: 50px;
+    transition: .7s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.progress-wrapper{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    transform: scale(0);
+    transition: .7s;
+    transition-delay: .5s;
+}
+.progress-wrapper .inr{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 60px;
+    height: 60px;
+    background: #fff;
+    border-radius: 50%;
+    z-index: 2;
+    transition: 1s ease;
+    transition-delay: 2s;
+}
+.progress-wrapper .bar{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background:#ededed;
+    border-radius: 50%;
+    clip:rect(0px,100px,100px,50px)
+}
+.circle .bar .progress-download{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right,#ff105f,#ffad06);
+    border-radius: 50%;
+    clip: rect(0,50px,100px,0px);
+    z-index: 1;
+}
+.circle .bar.left .progress-download{
+    transition: 1.5s linear;
+    transition-delay: 1s;
+}
+#downloadbtn.active .circle .bar.left .progress-download{
+    transform: rotate(180deg);
+}
+.circle .right{
+    transform: rotate(180deg);
+}
+.circle .bar.right .progress-download{
+    transition: 1.5s linear;
+    transition-delay: 2.5s;
+}
+#downloadbtn.active .circle .bar.right .progress-download{
+    transform: rotate(180deg);
+}
+#downloadbtn.active .progress-wrapper .inr{
+    transform: translate(-50%,-50%) scale(0);
+}
+
+#downloadbtn.active{
+    font-size: 0;
+    width: 50px;
+    background: #fff;
+}
+i{
+    margin-right: 10px;
+}
+
+#downloadbtn.active .progress-wrapper{
+    transform: scale(.6);
+}
+.progress-wrapper .checkmark{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    z-index: 2;
+}
+.checkmark span{
+    position: absolute;
+    display: block;
+    width: 30px;
+    height: 7px;
+    background:#ededed;
+    border-radius: 5px;
+    transform-origin: left;
+    transition-delay: .5s;
+}
+.checkmark span:first-child{
+    top: 45px;
+    left: 22px;
+    width: 30px;
+    transform: rotate(45deg) scaleX(0);
+    transition-delay: 5s;
+}
+#downloadbtn.active .checkmark span:first-child{
+    transform: rotate(45deg) scaleX(1);
+}
+.checkmark span:last-child{
+    top: 65px;
+    left: 40px;
+    width: 50px;
+    transform: rotate(-45deg) scaleX(0);
+    transition-delay: 5.5s;
+}
+#downloadbtn.active .checkmark span:last-child{
+    transform: rotate(-45deg) scaleX(1);
+}
+#downloadbtn{
+    margin-left: auto;
+    margin-right: auto;
+}
+.skill-item{
+    cursor: pointer;
+}
+.selected-skill {
+    background:linear-gradient(to right,#ff105f,#ffad06);
+    color: white;
+}
+.error-msg{
+    margin-top: 10px;
+    color: red;
+}
+
+
+
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin-top: 30px;
+  }
+  
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+
+  .slideshow-container img{
+    border-radius: 6px;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color:orange;
+  }
+  
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background: linear-gradient(to right,#ff105f,#ffad06);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color:linear-gradient(to right,#ff105f,#ffad06);
+  }
+  
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+  /* On smaller screens, decrease text size */
+  @media only screen and (max-width: 300px) {
+    .prev, .next,.text {font-size: 11px}
+  }
+
+
